@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome Page</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles_new.css') }}" />
+
+  <style>
+    body {
+      background-color: #f4f6f9;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="welcome-card">
+    <h2>Welcome, {{ username }} 👋</h2>
+    <p>You are successfully logged in.</p>
+
+    <form action="{{ url_for('logout_confirm') }}" method="POST">
+      <button type="submit" class="btn btn-logout">Logout</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 MyWebsite | All Rights Reserved
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_new.css') }}">
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="text-center mt-5">
+    <h2 class="text-danger">{{ message }}</h2>
+    <a href="{{ url_for('login_acc') }}" class="btn btn-primary mt-3">Back to Login</a>
+</body>
+</html>
+

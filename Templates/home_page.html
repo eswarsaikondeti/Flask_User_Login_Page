@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles_new.css') }}" />
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">MyWebsite</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/home_">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/create_acc">Create Account</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+            >
+              Menu
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/login_acc">Login</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="first-page-bg p-3">
+    <img
+      src="https://img.freepik.com/free-vector/creative-welcome-team-banner-corporate-hiring_1017-43282.jpg"
+      alt="Welcome Banner"
+    />
+    <h1 class="first-heading p-3">
+      Hello Everyone, Welcome <span class="spn-ele">All.</span>
+    </h1>
+    <p class="first-description p-2">
+      Let's <span class="sapm-descripton">Login to our website</span> for more details.
+    </p>
+    <hr class="hr-line" />
+    <div class="button-center pt-3">
+      <a href="{{ url_for('create_acc') }}">
+        <button class="first-button">Create Account</button>
+      </a>
+    </div>
+    <p class="first-description text-center p-3">
+      Already have an account?
+      <a href="{{ url_for('login_acc') }}" class="sapm-descripton text-decoration-none">Login</a>
+    </p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
